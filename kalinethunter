@@ -90,7 +90,7 @@ gettarfile() {
 	DESTINATION=$HOME/kali-${SETARCH}
 	seturl
     cd $HOME
-    rootfs="kalifs-armhf-minimal.tar.xz"
+    rootfs="kalifs-i386-minimal.tar.xz"
     if [ ! -f "$rootfs" ]; then
         axel ${EXTRAARGS} --alternate "$URL"
     else
