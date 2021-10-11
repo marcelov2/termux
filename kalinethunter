@@ -105,7 +105,7 @@ getsha() {
     if [ -f kalifs-i386-minimal.sha512sum ]; then
         rm kalifs-i386-minimal.sha512sum
     fi
-	axel ${EXTRAARGS} --alternate "https://images.kali.org/nethunter/kalifs-i386-minimal.sha512sum" -o kalifs-armhf-minimal.sha512sum
+	axel ${EXTRAARGS} --alternate "https://images.kali.org/nethunter/kalifs-i386-minimal.sha512sum" -o kalifs-i386-minimal.sha512sum
 }
 
 # Utility function to check integrity
