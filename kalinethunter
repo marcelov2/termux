@@ -80,7 +80,7 @@ checkdeps() {
 # URLs of all possibls architectures
 
 seturl() {
-	URL="https://images.kali.org/nethunter/kalifs-kalifs-armhf-minimal.tar.xz"
+	URL="https://images.kali.org/nethunter/kalifs-armhf-minimal.tar.xz"
 }
 
 # Utility function to get tar file
