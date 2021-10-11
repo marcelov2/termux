@@ -102,8 +102,8 @@ gettarfile() {
 
 getsha() {
 	printf "\n${blue} [*] Getting SHA ... $reset\n\n"
-    if [ -f kalifs-armhf-minimal.sha512sum.sha512sum ]; then
-        rm kalifs-armhf-minimal.sha512sum.sha512sum
+    if [ -f kalifs-armhf-minimal.sha512sum ]; then
+        rm kalifs-armhf-minimal.sha512sum
     fi
 	axel ${EXTRAARGS} --alternate "https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.sha512sum" -o kalifs-armhf-minimal.sha512sum.sha512sum
 }
