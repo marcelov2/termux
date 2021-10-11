@@ -80,7 +80,7 @@ checkdeps() {
 # URLs of all possibls architectures
 
 seturl() {
-	URL="https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.tar.xz"
+	URL="https://images.kali.org/nethunter/kalifs-latest/kalifs-armhf-minimal.tar.xz"
 }
 
 # Utility function to get tar file
@@ -105,7 +105,7 @@ getsha() {
     if [ -f kalifs-armhf-minimal.sha512sum ]; then
         rm kalifs-armhf-minimal.sha512sum
     fi
-	axel ${EXTRAARGS} --alternate "https://build.nethunter.com/kalifs/kalifs-latest/kalifs-armhf-minimal.sha512sum" -o kalifs-armhf-minimal.sha512sum
+	axel ${EXTRAARGS} --alternate "https://images.kali.org/nethunter/kalifs-armhf-minimal.sha512sum" -o kalifs-armhf-minimal.sha512sum
 }
 
 # Utility function to check integrity
