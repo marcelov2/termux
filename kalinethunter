@@ -80,7 +80,7 @@ checkdeps() {
 # URLs of all possibls architectures
 
 seturl() {
-	URL="https://images.kali.org/nethunter/kalifs-i386-minimal.tar.xz"
+	URL="https://images.kali.org/nethunter/kalifs-armhf-minimal.tar.xz"
 }
 
 # Utility function to get tar file
@@ -90,7 +90,7 @@ gettarfile() {
 	DESTINATION=$HOME/kali-${SETARCH}
 	seturl
     cd $HOME
-    rootfs="kalifs-i386-minimal.tar.xz"
+    rootfs="kalifs-armhf-minimal.tar.xz"
     if [ ! -f "$rootfs" ]; then
         axel ${EXTRAARGS} --alternate "$URL"
     else
@@ -105,7 +105,7 @@ getsha() {
     if [ -f kalifs-i386-minimal.sha512sum ]; then
         rm kalifs-i386-minimal.sha512sum
     fi
-	axel ${EXTRAARGS} --alternate "https://images.kali.org/nethunter/kalifs-i386-minimal.sha512sum" -o kalifs-i386-minimal.sha512sum
+	axel ${EXTRAARGS} --alternate "https://images.kali.org/nethunter/kalifs-armhf-minimal.sha512sum" -o kalifs-armhf-minimal.sha512sum
 }
 
 # Utility function to check integrity
@@ -114,7 +114,7 @@ checkintegrity() {
 	printf "\n${blue} [*] Checking integrity of file...\n"
 	echo " [*] The script will immediately terminate in case of integrity failure"
 	printf ' '
-	sha512sum -c kalifs-i386-minimal.sha512sum || {
+	sha512sum -c kalifs-armhf-minimal.sha512sum || {
 		printf "$red Sorry :( to say your downloaded linux file was corrupted or half downloaded, but don't worry, just rerun my script\n${reset}"
 		exit 1
 	}
